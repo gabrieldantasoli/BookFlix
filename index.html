@@ -1,0 +1,175 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Netflix Clone</title>
+     <link rel="stylesheet" href="css/main.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+     <!-- owl -->
+     <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+     <link rel="stylesheet" href="css/owl/owl.theme.default.css">
+ </head>
+ <body>
+     <header>
+         <h2 class="logo">Bookflix</h2>
+         <nav id="nav">
+             <a href="#dystopia">dystopia</a>
+             <a href="#romance">romance</a>
+             <a href="#horror">horror</a>
+             <a href="#mythology">mythology</a>
+         </nav>
+         <i class="fas fa-bars" id="bars"></i>
+     </header>
+
+     <main>
+         <div id="homeBanner">
+            <div class="content">
+                <h2>1984</h2>
+                <p>In this reality, controlling the past means controlling the future. Meet big brother and pretend you believe in everything that happens around you or die.</p>
+               <div class="buttons">
+                    <button><i class="fas fa-book-reader"></i>Read now</button>
+                    <button><i class="fas fa-list"></i>Add to list</button>
+               </div>
+             </div>
+             <div class="img">
+                 
+            </div>
+         </div>
+     </main>
+
+     <section id="dystopia">
+         <div>
+             <h2>dystopia</h2>
+         </div>
+         <div class="owl-carousel owl-theme">
+             <div>
+                 <img src="images/far.jpeg" class="box">
+             </div>
+             <div>
+                <img src="images/lord.webp" class="box">
+            </div>
+            <div>
+                <img src="images/orwell.jpeg" class="box">
+            </div>
+            <div>
+                <img src="images/power.webp" class="box">
+            </div>
+            <div>
+                <img src="images/wel.jpeg" class="box">
+            </div>
+            <div>
+                <img src="images/young.jpeg" class="box">
+            </div>
+         </div>
+     </section>
+
+     <section id="romance">
+         <h2>Romance</h2>
+         <div class="owl-carousel owl-theme">
+            <div>
+                <img src="images/love1.jpeg" class="box">
+            </div>
+            <div>
+               <img src="images/love2.jpg" class="box">
+           </div>
+           <div>
+               <img src="images/love3.jpg" class="box">
+           </div>
+           <div>
+               <img src="images/love4.jpg" class="box">
+           </div>
+           <div>
+               <img src="images/love5.jpeg" class="box">
+           </div>
+           <div>
+               <img src="images/love6.jpeg" class="box">
+           </div>
+         </div>
+     </section>
+
+     <section id="horror">
+         <h2>horror</h2>
+         <div class="owl-carousel owl-theme">
+            <div>
+                <img src="images/horror1.jpg" class="box">
+            </div>
+            <div>
+                <img src="images/horror2.jpg" class="box">
+            </div>
+            <div>
+                <img src="images/horror3.jpg" class="box">
+            </div>
+            <div>
+                <img src="images/horror4.jpg" class="box">
+            </div>
+            <div>
+                <img src="images/horror5.jpg" class="box">
+            </div>
+            <div>
+                <img src="images/horror6.jpeg" class="box">
+            </div>
+        </div>
+     </section>
+
+    <section id="mythology">
+        <h2>mythology</h2>
+        <div class="owl-carousel owl-theme">
+            <div>
+                <img src="images/mit1.jpg" class="box">
+            </div>
+            <div>
+                <img src="images/mit2.jpg" class="box">
+            </div>
+            <div>
+                <img src="images/mit3.jpg" class="box">
+            </div>
+            <div>
+                <img src="images/mit4.jpg" class="box">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>created by <a href="https://github.com/gabrieldantasoli" target="_blank">Gabriel Dantas</a></p>
+    </footer>
+
+
+
+     <script>
+        var bars = document.querySelector('#bars');
+        var nav = document.querySelector('#nav');
+
+
+        bars.addEventListener('click',() => {
+            if (bars.classList == 'fas fa-bars') {
+                bars.classList.replace('fa-bars','fa-times');
+            }else {
+                bars.classList.replace('fa-times','fa-bars');
+            }
+            nav.classList.toggle('active');
+        })
+
+        window.onscroll = (e) => {
+            if (bars.classList == 'fas fa-times') {
+                bars.classList.replace('fa-times','fa-bars');
+                nav.classList.remove('active')
+            }
+        }
+
+        window.onresize = (e) => {
+            if(window.innerWidth > 650) {
+                if (bars.classList == 'fas fa-times') {
+                    bars.classList.replace('fa-times','fa-bars');
+                    nav.classList.remove('active')
+                }
+            }
+        }
+     </script>
+     <script src="js/owl/jquery.min.js"></script>
+     <script src="js/owl/owl.carousel.min.js"></script>
+     <script src="js/owl/main.js"></script>
+ </body>
+ </html>

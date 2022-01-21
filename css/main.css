@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+:root{
+    --red: #e50914;
+    --black: #141414;
+}
+
+::selection{
+    background-color: var(--red);
+    color: var(--black);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    color: #c7c2c2;
+}
+
+body{
+    background-color: var(--black);
+    overflow-x: hidden;
+}
+
+/* header style*/
+header{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 .5rem 1rem rgba(255, 255, 255, 0.2);
+}
+header .logo{
+    font-size: 40px;
+    color: var(--red);
+    font-family: oswald;
+    text-transform: uppercase;
+    text-shadow: 0 0 .1rem var(--red);
+}
+header nav a{
+    font-size: 1.3rem;
+    margin-left: .5rem;
+    text-transform: capitalize;
+}
+header nav a:hover{
+    color: #fff;
+    text-shadow: 0 0 .5rem #fff;
+}
+header #bars{
+    color: white;
+    font-size: 2rem;
+    padding: .6rem;
+    display: none;
+    transition: 1s ease-in-out;
+}
+#homeBanner{
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#homeBanner .content{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#homeBanner .content h2{
+    color: #fff;
+    text-shadow: 0 0 .5rem #fff;
+    font-size: 4rem;
+}
+#homeBanner .content p{
+    text-align: justify;
+    color: #fff;
+    max-width: 80%;
+    text-indent: 1rem;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+#homeBanner .content .buttons button{
+    padding: 1rem;
+    background-color: var(--black);
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+#homeBanner .content .buttons button:hover{
+    background-color: white;
+    color: var(--black);
+}
+#homeBanner .content .buttons button:hover i{
+    color: var(--red);
+}
+#homeBanner .content .buttons button i{
+    margin-right: .5rem;
+}
+#homeBanner .img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,#000,transparent),url(../images/1984.jpg);
+    object-fit: cover;
+    opacity: 0.4;
+}
+.box{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+section h2{
+    color: var(--red);
+    margin: 1rem;
+    font-size: 40px;
+    font-family: oswald;
+}
+footer{
+    padding: 1.5rem;
+    background-color: #000;
+    color: #fff;
+    margin-top: 1rem;
+}
+footer p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+footer a{
+    font-weight: 600;
+}
+footer a:hover{
+    color: var(--red);
+}
+
+
+
+
+@media (max-width:450px) {
+    #homeBanner .content h2{
+        font-size: 2.5rem;
+    }
+    #homeBanner .content p{
+        max-width: 90%;
+        font-size: 1.2rem;
+    }
+    #homeBanner .content .buttons button{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    #homeBanner .content .buttons{
+        display: flex;
+        flex-direction: column;
+    } 
+}
+@media (max-width:650px){
+    header nav{
+        position: absolute;
+        top: 92px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0,0,0,.9);
+        width: 100%;
+        transform: translateY(-200%);
+        transition: 1s;
+        z-index: 999;
+    }
+    header nav.active{
+        transform: translateY(0);
+    }
+    header nav a{
+        padding: 1rem;
+        text-align: center;
+    }
+    header #bars{
+        display: initial;
+        color: #fff;
+    }
+    header #bars:hover{
+        color: var(--red);
+        transform: rotate(360deg);
+    }
+}
